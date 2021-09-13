@@ -25,9 +25,12 @@ class Game:
 
     def run_game(self):
 
+
+    def determine_winner(self):
     
     def compare_gestures(self):
      if gesture_input == gesture_input
             print("It's a tie.")
+    elif 
             # put a way to start round over
     elif 
