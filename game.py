@@ -13,15 +13,21 @@ class Game:
         "Paper disproves Spock"
         "Spock vaporizes Rock")
 
+    def gestures(self):
+        self.rock = 1
+        self.scissors = 2
+        self.paper = 3
+        self.lizard = 4
+        self.spock =5
+    
     def player_choice(self):
         input("Are you playing single player or multiplayer? Type 'single player' or 'multiplayer'")
 
-    def name_input(self):
-        input("Type in your names")
+    def run_game(self):
 
-    def gesture_input(self):
-        input("Choose 'rock', 'paper', 'scissors', 'lizard', or 'spock'")
-        if gesture_input == gesture_input
+    
+    def compare_gestures(self):
+     if gesture_input == gesture_input
             print("It's a tie.")
             # put a way to start round over
-        elif "rock" > "paper"
+    elif 
