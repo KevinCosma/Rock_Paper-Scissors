@@ -76,11 +76,48 @@ class Game:
         self.player2 = Human()
         self.player1.get_selection()
         self.player2.get_selection()
+        if self.player1.choice == "rock" and self.player2.choice == "lizard" or "scissors":
+            print("Player 1 Wins!")
+            self.player1.score += 1
+        elif self.player1.choice == "scissors" and self.player2.choice == "lizard" or "paper":
+            print("Player 1 Wins!")
+            self.player1.score += 1
+        elif self.player1.choice == "paper" and self.player2.choice== "rock" or "spock":
+            print("Player 1 Wins!")
+            self.player1.score += 1
+        elif self.player1.choice == "spock" and self.player2.choice == "scissors" or "rock":
+            print("Player 1 Wins!")
+            self.player1.score += 1
+        elif self.player1.choice == "lizard" and self.player2.choice == "spock" or "paper":
+            print("Player 1 Wins!")
+            self.player1.score += 1   
+        elif self.player1.choice == self.player2.choice:
+            print("Its a tie!")
+        elif self.player2.choice == "rock" and self.player1.choice == "lizard" or "scissors":
+            print("Computer Wins!")
+            self.player2.score += 1
+        elif self.player2.choice == "scissors" and self.player1.choice == "lizard" or "paper":
+            print("Computer Wins!")
+            self.player2.score += 1
+        elif self.ai.choice == "paper" and self.player1.choice == "rock" or "spock":
+            print("Computer Wins!")
+            self.player2.score += 1
+        elif self.player2.choice == "spock" and self.player1.choice == "scissors" or "rock":
+            print("Computer Wins!")
+            self.player2.score += 1
+        elif self.player2.choice == "lizard" and self.player1.choice == "spock" or "paper":
+            print("Computer Wins!")
+            self.player2.score += 1
+        elif self.player1.choice != "rock" "paper" "scissors" "lizard" or "spock":
+            print("Please enter valid input!")
 
     def determine_winner(self):
-        if Player.score == 2:
+        self.player_score = Player()
+        if self.player.score == 2:
             print("You are the winner")
-        if Human.score == 2:
+        self.human_score = Human()
+        if self.human_score.score == 2:
             print("You are the winner")
-        if Computer.score == 2:
+        self.computer_score = Computer()
+        if self.computer_score.score == 2:
             print ("You are the winner") 
