@@ -5,16 +5,16 @@ class Game:
     def __init__(self):
         print("Welcome to RPSLS!")
     
-        print("Rock crushes Scissors" 
-        "Scissors cuts Paper"
-        "Paper covers Rock" 
-        "Rock crushes Lizard" 
-        "Lizard poisons Spock"
-        "Spock smashes Scissors"
-        "Scissors decapitates Lizard"
-        "Lizard eats Paper" 
-        "Paper disproves Spock"
-        "Spock vaporizes Rock")
+        print("Rock crushes Scissors, " 
+        "Scissors cuts Paper, "
+        "Paper covers Rock, " 
+        "Rock crushes Lizard, " 
+        "Lizard poisons Spock, "
+        "Spock smashes Scissors, "
+        "Scissors decapitates Lizard, "
+        "Lizard eats Paper, " 
+        "Paper disproves Spock, "
+        "Spock vaporizes Rock.")
 
     def run_game(self):
         self.player_choice()
