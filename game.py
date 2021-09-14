@@ -52,14 +52,14 @@ class Game:
 
     def player_vs_ai(self):
         self.player1 = Player()
-        self.player2 = Computer()
-        self.player1.get_user_input()
-        self.player2.get_ai_choice()
-        if self.player1.get_user_input > self.player2.get_ai_choice:
+        self.ai = Computer()
+        self.player1.get_selection()
+        self.ai.get_selection()
+        if self.player1.get_selection > self.ai.get_selection:
             self.player_score = Player()
             self.player_score.score()
             self.player_score += 1
-        elif self.player2.get_ai_choice > self.player1.get_user_input:
+        elif self.ai.get_selection > self.player1.get_selection:
             self.computer_score = Computer()
             self.computer_score.score()
             self.computer_score += 1
@@ -67,8 +67,8 @@ class Game:
     def player_vs_human(self):
         self.player1 = Player()
         self.player2 = Human()
-        self.player1.get_user_input()
-        self.player2.get_user_input()
+        self.player1.get_selection()
+        self.player2.get_selection()
         if self.player1 > self.player2:
             self.player_score = Player()
             self.player_score.score()

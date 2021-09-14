@@ -5,7 +5,7 @@ class Computer(Player):
     def __init__(self):
         super().__init__()
         
-    def get_ai_choice(self):
+    def get_selection(self):
         self.choice = random.randint(1,5)
         if self.choice == 1:
             self.choice = "Rock"
