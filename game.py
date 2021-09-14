@@ -79,9 +79,9 @@ class Game:
             self.human_score += 1
 
     def determine_winner(self):
-        if Player.wins == 2:
+        if Player.score == 2:
             print("You are the winner")
-        if Human.wins == 2:
+        if Human.score == 2:
             print("You are the winner")
-        if Computer.wins == 2:
+        if Computer.score == 2:
             print ("You are the winner") 
