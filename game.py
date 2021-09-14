@@ -1,5 +1,6 @@
+from human import Human
+from computer import Computer
 from player import Player
-
 class Game:
     def __init__(self):
         print("Welcome to RPSLS!")
@@ -14,20 +15,72 @@ class Game:
         "Lizard eats Paper" 
         "Paper disproves Spock"
         "Spock vaporizes Rock")
+
+    def run_game(self):
+        self.player_vs_ai()
+           
     
     def player_choice(self):
         input("Are you playing single player or multiplayer? Type 'single player' or 'multiplayer'")
         if input == "single player":
+            return Game.player_vs_ai
+        if input == "multiplayer":
+            return Game.player_vs_human
+        else:
+            return input
+        
 
-    def run_game(self):
-        pass
 
     def determine_winner(self):
-        pass
+        if Player.wins == 2:
+            print("You are the winner")
+        if Human.wins == 2:
+            print("You are the winner")
+        if Computer.wins == 2:
+            print ("You are the winner") 
     
     def compare_gestures(self):
-        pass
+        self.rock - "rock"
+        self.paper = "paper"
+        self.scissors = "scissors"
+        self.lizard = "lizard"
+        self.spock = "spock"        
+        "rock" > "scissors"
+        "scissors" > "paper"
+        "paper" > "rock"
+        "rock" > "lizard"
+        "lizard" > "spock"
+        "spock" > "scissors"
+        "scissors" > "lizard"
+        "lizard" > "paper"
+        "paper" > "spock"
+        "spock" > "rock"
 
-    def play_again():
-        play_again = input("Play again? (y/n): ")
-        if play_again.lower() != "y":
+    def player_vs_ai(self):
+        self.player1 = Player()
+        self.player2 = Computer()
+        self.player1.get_user_input()
+        self.player2.get_ai_choice()
+        if self.player1.get_user_input > self.player2.get_ai_choice:
+            self.player_score = Player()
+            self.player_score.score()
+            self.player_score += 1
+        elif self.player2.get_ai_choice > self.player1.get_user_input:
+            self.computer_score = Computer()
+            self.computer_score.score()
+            self.computer_score += 1
+
+    def player_vs_human(self):
+        self.player1 = Player()
+        self.player2 = Human()
+        self.player1.get_user_input()
+        self.player2.get_user_input()
+        if self.player1 > self.player2:
+            self.player_score = Player()
+            self.player_score.score()
+            self.player_score += 1
+        elif self.player2 > self.player1:
+            self.human_score = Human()
+            self.human_score.score()
+            self.human_score += 1
+

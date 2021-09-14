@@ -3,18 +3,18 @@ import random
 
 class Computer:
     def __init__(self):
-        self.choice = " "
+        self.score = 0
         
-    def get_ai_choice(ai):
-        ai.choice = random.randrange(0, 5)
-        if ai.choice == 1:
+    def get_ai_choice(self):
+        self.choice = random.randint(1, 5)
+        if self.choice == 1:
             print("Rock")
-        elif ai.choice == 2:
+        elif self.choice == 2:
             print("Paper")
-        elif ai.choice == 3:
+        elif self.choice == 3:
             print("Scissors")
-        elif ai.choice == 4:
+        elif self.choice == 4:
             print("Lizard")
-        elif ai.choice == 5:
+        elif self.choice == 5:
             print("Spock")
-        return ai.choice
+        return self.choice
