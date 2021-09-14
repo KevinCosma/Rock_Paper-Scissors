@@ -1,3 +1,5 @@
+from player import Player
+
 class Game:
     def __init__(self):
         print("Welcome to RPSLS!")
@@ -12,25 +14,20 @@ class Game:
         "Lizard eats Paper" 
         "Paper disproves Spock"
         "Spock vaporizes Rock")
-
-    def gestures(self):
-        self.rock = 1
-        self.scissors = 2
-        self.paper = 3
-        self.lizard = 4
-        self.spock =5
     
     def player_choice(self):
         input("Are you playing single player or multiplayer? Type 'single player' or 'multiplayer'")
+        if input == "single player":
 
     def run_game(self):
-
+        pass
 
     def determine_winner(self):
+        pass
     
     def compare_gestures(self):
-     if gesture_input == gesture_input
-            print("It's a tie.")
-    elif 
-            # put a way to start round over
-    elif 
+        pass
+
+    def play_again():
+        play_again = input("Play again? (y/n): ")
+        if play_again.lower() != "y":
