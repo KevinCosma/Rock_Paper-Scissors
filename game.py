@@ -17,30 +17,24 @@ class Game:
         "Spock vaporizes Rock")
 
     def run_game(self):
-        self.player_vs_ai()
+        self.player_choice()
+        self.player_vs_human()
            
     
     def player_choice(self):
+        self.ai_game = Game()
+        self.human_game = Game()
         input("Are you playing single player or multiplayer? Type 'single player' or 'multiplayer'")
         if input == "single player":
-            return Game.player_vs_ai
+            return self.ai_game.player_vs_ai()
         if input == "multiplayer":
-            return Game.player_vs_human
+            return self.human_game.player_vs_human()
         else:
             return input
         
-
-
-    def determine_winner(self):
-        if Player.wins == 2:
-            print("You are the winner")
-        if Human.wins == 2:
-            print("You are the winner")
-        if Computer.wins == 2:
-            print ("You are the winner") 
     
-    def compare_gestures(self):
-        self.rock - "rock"
+    def gestures(self):
+        self.rock = "rock"
         self.paper = "paper"
         self.scissors = "scissors"
         self.lizard = "lizard"
@@ -84,3 +78,10 @@ class Game:
             self.human_score.score()
             self.human_score += 1
 
+    def determine_winner(self):
+        if Player.wins == 2:
+            print("You are the winner")
+        if Human.wins == 2:
+            print("You are the winner")
+        if Computer.wins == 2:
+            print ("You are the winner") 
