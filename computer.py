@@ -8,18 +8,18 @@ class Computer(Player):
     def get_selection(self):
         self.choice = random.randint(1,5)
         if self.choice == 1:
-            self.choice = "Rock"
-            print("Rock")
+            self.choice = "rock"
+            print("rock")
         elif self.choice == 2:
-            self.choice = "Paper"
-            print("Paper")
+            self.choice = "paper"
+            print("paper")
         elif self.choice == 3:
-            self.choice = "Scissors"
-            print("Scissors")
+            self.choice = "scissors"
+            print("scissors")
         elif self.choice == 4:
-            self.choice = "Lizard"
-            print("Lizard")
+            self.choice = "lizard"
+            print("lizard")
         elif self.choice == 5:
-            self.choice = "Spock"
-            print("Spock")
+            self.choice = "spock"
+            print("spock")
         return self.choice

@@ -18,6 +18,7 @@ class Game:
 
     def run_game(self):
         self.player_choice()
+        self.player_vs_ai()
         self.player_vs_human()
            
     
@@ -29,54 +30,52 @@ class Game:
             return self.ai_game.player_vs_ai()
         if input == "multiplayer":
             return self.human_game.player_vs_human()
-        else:
-            return input
-        
-    
-    def gestures(self):
-        self.rock = "rock"
-        self.paper = "paper"
-        self.scissors = "scissors"
-        self.lizard = "lizard"
-        self.spock = "spock"        
-        "rock" > "scissors"
-        "scissors" > "paper"
-        "paper" > "rock"
-        "rock" > "lizard"
-        "lizard" > "spock"
-        "spock" > "scissors"
-        "scissors" > "lizard"
-        "lizard" > "paper"
-        "paper" > "spock"
-        "spock" > "rock"
 
     def player_vs_ai(self):
         self.player1 = Player()
         self.ai = Computer()
         self.player1.get_selection()
         self.ai.get_selection()
-        if self.player1.get_selection > self.ai.get_selection:
-            self.player_score = Player()
-            self.player_score.score()
-            self.player_score += 1
-        elif self.ai.get_selection > self.player1.get_selection:
-            self.computer_score = Computer()
-            self.computer_score.score()
-            self.computer_score += 1
-
+        if self.player1.choice == "rock" and self.ai.choice == "lizard" or "scissors":
+            print("Player 1 Wins!")
+            self.player1.score += 1
+        elif self.player1.choice == "scissors" and self.ai.choice == "lizard" or "paper":
+            print("Player 1 Wins!")
+            self.player1.score += 1
+        elif self.player1.choice == "paper" and self.ai.choice == "rock" or "spock":
+            print("Player 1 Wins!")
+            self.player1.score += 1
+        elif self.player1.choice == "spock" and self.ai.choice == "scissors" or "rock":
+            print("Player 1 Wins!")
+            self.player1.score += 1
+        elif self.player1.choice == "lizard" and self.ai.choice == "spock" or "paper":
+            print("Player 1 Wins!")
+            self.player1.score += 1   
+        elif self.player1.choice == self.ai.choice:
+            print("Its a tie!")
+        elif self.ai.choice == "rock" and self.player1.choice == "lizard" or "scissors":
+            print("Computer Wins!")
+            self.ai.score += 1
+        elif self.ai.choice == "scissors" and self.player1.choice == "lizard" or "paper":
+            print("Computer Wins!")
+            self.ai.score += 1
+        elif self.ai.choice == "paper" and self.player1.choice == "rock" or "spock":
+            print("Computer Wins!")
+            self.ai.score += 1
+        elif self.ai.choice == "spock" and self.player1.choice == "scissors" or "rock":
+            print("Computer Wins!")
+            self.ai.score += 1
+        elif self.ai.choice == "lizard" and self.player1.choice == "spock" or "paper":
+            print("Computer Wins!")
+            self.ai.score += 1
+        elif self.player1.choice != "rock" "paper" "scissors" "lizard" or "spock":
+            print("Please enter valid input!")
+    
     def player_vs_human(self):
         self.player1 = Player()
         self.player2 = Human()
         self.player1.get_selection()
         self.player2.get_selection()
-        if self.player1 > self.player2:
-            self.player_score = Player()
-            self.player_score.score()
-            self.player_score += 1
-        elif self.player2 > self.player1:
-            self.human_score = Human()
-            self.human_score.score()
-            self.human_score += 1
 
     def determine_winner(self):
         if Player.score == 2:
